@@ -68,8 +68,11 @@ nav a {
 
 /* Hero Section */
 .hero {
-  background: #3a5c72;
+  position:relative;
+  height: 40vh;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../images/photo1.png');
   background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
   padding: 5rem 0;
