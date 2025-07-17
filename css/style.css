@@ -22,7 +22,7 @@ body {
 
 /* Navbar */
 nav {
-  background: white;
+  background: #fefafa;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   position: sticky;
@@ -68,20 +68,77 @@ nav a {
 
 /* Hero Section */
 .hero {
-  position:relative;
-  height: 40vh;
-  background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('../images/photo1.png');
+  position: relative;
+  height: 50vh; /* Increased height for better text display */
+  background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), 
+                   url('../images/photo1.png');
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
-  padding: 5rem 0;
-  transition: 0.3s;
+  padding: 10rem 0 5rem; /* Adjusted padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.hero-logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  background-image: url('../images/baseilogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  filter: 
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.7)) 
+    drop-shadow(0 0 40px rgba(255, 255, 255, 0.356));
+  animation: float 3s ease-in-out infinite;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.hero-logo:hover {
+  filter: 
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 30px rgba(174, 171, 159, 0.6));
+  transform: translateX(-50%) scale(1.1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem; /* Larger main heading */
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  font-size: 1.8rem; /* Larger paragraph text */
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content button {
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background: #25D366; /* WhatsApp green as example */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero-content button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* Services Grid */
@@ -178,5 +235,6 @@ footer {
 
   .hero h1 {
     font-size: 2rem;
+    text-shadow: #3a5c72 2px 2px 4px;
   }
 }
