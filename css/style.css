@@ -76,6 +76,7 @@ nav a {
   color: white;
   text-align: center;
   padding: 5rem 0;
+  transition: 0.3s;
 }
 
 .hero h1 {
